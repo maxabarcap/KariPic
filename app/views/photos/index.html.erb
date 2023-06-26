@@ -1,0 +1,9 @@
+<h1>Lista de Fotos</h1>
+<ul>
+  <% @photos.each do |photo| %>
+    <li>
+      <%= link_to photo.caption, photo_path(photo) %>
+      Subido por: <%= link_to photo.user.name, user_path(photo.user) %>
+    </li>
+  <% end %>
+</ul>
